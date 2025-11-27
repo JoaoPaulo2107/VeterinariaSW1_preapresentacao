@@ -1,0 +1,261 @@
+.meuspets-container {
+    padding: 100px 0 20px 0; 
+    min-height: 80vh;
+    margin-top: 80px; 
+}
+
+.meuspets-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Cabeçalho */
+.meuspets-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.meuspets-title {
+    color: #2c3e50;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.meuspets-btn-cadastrar {
+    background-color: #3e51fa;
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.meuspets-btn-cadastrar:hover {
+    background-color: #2d219a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(66, 39, 174, 0.3);
+}
+
+/* Grid de pets */
+.meuspets-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Cards individuais */
+.meuspets-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.meuspets-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.meuspets-card-content {
+    padding: 25px;
+}
+
+.meuspets-pet-name {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.meuspets-pet-info {
+    color: #555;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.meuspets-btn-editar {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.meuspets-btn-excluir {
+    background-color: #f05353;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+}
+
+.meuspets-btn-excluir:hover {
+    background-color: #d64545;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(240, 71, 71, 0.3);
+}
+.meuspets-btn-editar:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+/* Responsividade telas maiores */
+@media (min-width: 768px) {
+    .meuspets-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .meuspets-header {
+        margin-bottom: 40px;
+    }
+    
+    .meuspets-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Responsividade telas muito grandes */
+@media (min-width: 1200px) {
+    .meuspets-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* animação */
+.meuspets-card {
+    animation: meuspetsFadeInUp 0.6s ease-out;
+}
+
+@keyframes meuspetsFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade para celular */
+@media (max-width: 576px) {
+    .meuspets-container {
+        padding: 80px 0 20px 0;
+        margin-top: 60px;
+    }
+    
+    .meuspets-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .meuspets-btn-cadastrar {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .meuspets-title {
+        font-size: 1.8rem;
+    }
+    
+    .meuspets-card-content {
+        padding: 20px;
+    }
+}
+/* Estilos para o modal de cadastro */
+#cadastroPetModal .modal-content {
+    border-radius: 10px;
+    border: none;
+}
+
+#cadastroPetModal .modal-header {
+    border-radius: 10px 10px 0 0;
+    padding: 20px;
+}
+
+#cadastroPetModal .modal-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#cadastroPetModal .modal-body {
+    padding: 30px;
+}
+
+#cadastroPetModal .form-label {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+#cadastroPetModal .form-control {
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+#cadastroPetModal .form-control:focus {
+    border-color: #3e51fa;
+    box-shadow: 0 0 0 0.2rem rgba(62, 81, 250, 0.25);
+}
+
+#cadastroPetModal .modal-footer {
+    border-top: 1px solid #e0e0e0;
+    padding: 20px 30px;
+}
+
+#cadastroPetModal .btn {
+    padding: 10px 25px;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+#cadastroPetModal .btn-primary:hover {
+    background-color: #2d219a !important;
+    border-color: #2d219a !important;
+    transform: translateY(-2px);
+}
+
+/* Responsividade do modal */
+@media (max-width: 768px) {
+    #cadastroPetModal .modal-dialog {
+        margin: 20px;
+    }
+    
+    #cadastroPetModal .modal-body {
+        padding: 20px;
+    }
+}

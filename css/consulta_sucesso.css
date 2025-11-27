@@ -1,0 +1,52 @@
+/* Faz o footer ir para o final da página */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    min-height: calc(100vh - 120px); /* ajuste conforme altura do header + footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sucesso-container {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.sucesso-container h1 {
+    color: #003366;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.sucesso-container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #444;
+}
+
+.btn-voltar {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #1a73e8;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.btn-voltar:hover {
+    background: #1159b3;
+}
